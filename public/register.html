@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Groov Store</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>    
+    </head>
+<body>
+    <div id="topbar" class="topbar">
+        <topbar></topbar>
+    </div>
+    <h1 style="text-align: center;">Registrarse</h1>
+    <div class="container d-flex justify-content-center">
+        <div class="login-form-box">
+            <form action="../register.php" method="post">
+                <div class="form-group">
+                    <label for="client_name">Nombre</label>
+                    <input class="form-control" type="text" name="client_name" id="client_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="client_lastname">Apellido</label>
+                    <input class="form-control" type="text" name="client_lastname" id="client_lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="client_email">Correo</label>
+                    <input class="form-control" type="email" name="client_email" id="client_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Usuario</label>
+                    <input class="form-control" type="text" name="username" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input class="form-control" type="password" name="password" id="password" required>
+                </div>
+                <div class="form-group">
+                <button class="form-control btn btn-primary" type="button" onclick="checkValidation(this.form)">Registrarse</button>
+                </div>
+                <a href="login.html">Ya tengo cuenta</a>
+            </form>
+        </div>
+    </div>
+    <script src="./groov-function.js"></script>
+</body>
+</html>

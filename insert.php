@@ -2,7 +2,7 @@
 
 require './connection.php';
 
-$jsonData = file_get_contents('./ropa.json');
+$jsonData = file_get_contents('./public/ropa.json');
 $data = json_decode($jsonData,true);
 
 $pantalones = $data['pantalones'];

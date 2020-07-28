@@ -15,24 +15,12 @@
     <div id="topbar" class="topbar">
         <topbar></topbar>
     </div>
-    <h1 style="text-align: center;">Registrarse</h1>
+    <h1 style="text-align: center;">Iniciar Sesión</h1>
     <div class="container d-flex justify-content-center">
         <div class="login-form-box">
-            <form action="./register.php" method="post">
+            <form action="../login.php" method="post">
                 <div class="form-group">
-                    <label for="client_name">Nombre</label>
-                    <input class="form-control" type="text" name="client_name" id="client_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="client_lastname">Apellido</label>
-                    <input class="form-control" type="text" name="client_lastname" id="client_lastname" required>
-                </div>
-                <div class="form-group">
-                    <label for="client_email">Correo</label>
-                    <input class="form-control" type="email" name="client_email" id="client_email" required>
-                </div>
-                <div class="form-group">
-                    <label for="username">Usuario</label>
+                    <label for="username">Nombre de usuario</label>
                     <input class="form-control" type="text" name="username" id="username" required>
                 </div>
                 <div class="form-group">
@@ -40,9 +28,10 @@
                     <input class="form-control" type="password" name="password" id="password" required>
                 </div>
                 <div class="form-group">
-                <button class="form-control btn btn-primary" type="button" onclick="checkValidation(this.form)">Registrarse</button>
+                <button class="form-control btn btn-primary" type="button" onclick="checkValidation(this.form)">Entrar</button>
                 </div>
-                <a href="login.html">Ya tengo cuenta</a>
+                <a href="#">Olvidé la contraseña</a><br>
+                <a href="./register.html">Crea una cuenta</a>
             </form>
         </div>
     </div>

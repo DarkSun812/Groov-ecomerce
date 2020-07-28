@@ -6,36 +6,36 @@ $cpath = "/groovecomerce";
 
 switch ($requests) {
     case $cpath . '/':
-        header('Location: ' . $cpath . '/index.html');
+        header('Location: ' . $cpath . '/public/index.html');
         die();
         break;
-    case $cpath . '/register':
-        header('Location: ' . $cpath . '/register.html');
+    case $cpath . '/public/register':
+        header('Location: ' . $cpath . '/public/register.html');
         die();
         break;
-    case $cpath . '/store':
+    case $cpath . '/public/store':
         if (isset($_SESSION)) {
-            header('Location: ' . $cpath . '/login.html');
+            header('Location: ' . $cpath . '/public/login.html');
             die();
         } else {
-            header('Location: ' . $cpath . '/store.php');
+            header('Location: ' . $cpath . '/public/store.php');
             die();
         }
         break;
-    case $cpath . '/login':
-        header('Location: ' . $cpath . '/login.html');
+    case $cpath . '/public/login':
+        header('Location: ' . $cpath . '/public/login.html');
         die();
         break;
     case $cpath . '/logout':
         header('Location: ' . $cpath . '/logout.php');
         die();
         break;
-    case $cpath . '/carrito':
-        header('Location: ' . $cpath . '/carrito.php');
+    case $cpath . '/public/carrito':
+        header('Location: ' . $cpath . '/public/carrito.php');
         die();
         break;
     default:
-        header('Location: ' . $cpath . '/Page_not_found.html');
+        header('Location: ' . $cpath . '/public/index.html');
         die();
         break;
 }

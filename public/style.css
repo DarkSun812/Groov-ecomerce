@@ -1,0 +1,213 @@
+:root{
+    --carousel-image: url('none');
+}
+
+.logo{
+    height: 5vh;
+}
+
+.navbar-options{
+    position: relative;
+}
+
+#userMenuBtn{
+    color: white;
+    cursor: pointer;
+}
+#userMenuBtn:hover{
+    text-decoration-line: underline;
+}
+
+.userMenu{
+    display: flex;
+    padding: 1vw;
+    top: 100%;
+    right: 20%;
+    position: absolute;
+}
+
+.showcase{
+    background-color: black;
+    width: 100%;
+    z-index: -3;
+    height: 50vh;
+    max-height: 50vh;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.showcase img{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+     height: 100%;
+    position: relative;
+    z-index: -2;
+    animation: sliding 20s linear 0s infinite;
+}
+
+@keyframes sliding{
+    0%{
+        transform: scaleX(1);
+        right: 0%
+    }
+    31%{
+        transform: scaleX(1);
+        right: 0%
+    }
+    33%{
+        transform: scaleX(1);
+        right: 100%;
+    }
+    64%{
+        transform: scaleX(1);
+        right: 100%;
+    }
+    66%{
+        transform: scaleX(1.057);
+        right: 200%;
+    }
+    97%{
+        transform: scaleX(1.057);
+        right: 200%;
+    }
+    99%{
+        transform: scaleX(1);
+        right: 0%;
+    }
+    100%{
+        transform: scaleX(1);
+        right: 0%;
+    }
+}
+
+.showcase-direction{
+    font-size: 4rem;
+    cursor: pointer;
+    opacity: 0.2;
+    position: absolute;
+}
+
+.showcase:hover .showcase-direction{
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+/* ---- */
+
+.best-sell{
+    padding: 3vw;
+}
+/* Agregado para el carrito */
+.best-selling{
+    padding: 3vw;
+}
+/* Fin del carrito */
+/*Botones de los items*/
+div.item-box div.button{
+    height: 3vh;
+    width: 30vh;
+    visibility: hidden;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.item-box:hover div.button{
+    visibility: visible;
+}
+
+.item-box{
+    width: 32%;
+    height: 55vh; 
+    padding: 0.5px;
+    text-align: center;
+    background-color:white;
+}
+
+.item-box:hover{
+    background-color: rgb(228, 227, 227);
+}
+
+div.contenido {
+    width: 100%;
+    height: 100%;
+}
+div.item-box div.contenido div.item-image{
+    background-color:none;
+    width: 100%;
+    height:75%;
+    z-index: -1;
+}
+
+div.item-box div.contenido div.item-image img{
+    padding: 1vh;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+
+.item-price{
+    display:inline-block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    padding: 3%;
+}
+
+/* ---CARRITO */
+
+.articulo-box{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 20vh;
+    border: 1px solid #8080808c;
+    overflow: hidden;
+}
+
+.articulo-img{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.articulo-img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.quitar-articulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.quitar-articulo:hover{
+    background-color: lightgray;
+}
+
+.container{
+    margin-top: 2vh;
+    background-color: white;
+}
+
+div.todo {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}

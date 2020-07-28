@@ -69,7 +69,7 @@ Vue.component('topbar',{
     template:`
     <nav class="navbar bg-secondary d-flex justify-contnet-between">
         <a href="./index.html" class="navbar-brand text-white">
-            <img src="./img/logo.png" alt="logo-groov" class="logo">
+            <img loading="lazy" src="../img/logo.png" alt="logo-groov" class="logo">
         </a>
         <div v-if="isLogged" class="navbar-options d-flex flex-column p-1">
             <span v-on:click="isHidden = !isHidden" id="userMenuBtn">{{ username }}</span>
