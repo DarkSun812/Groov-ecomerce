@@ -1,5 +1,6 @@
 <?php
-    require '../connection.php'
+    session_start();
+    require '../connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,9 @@
 </head>
 <body>
     <div v-if="ok" id="topbar" class="topbar">
-        <topbar></topbar>
+        <?php
+            echo '<topbar id_user="'.$_SESSION['id_user'].'" username="'.$_SESSION['username'].'" tipo_usuario="'.$_SESSION['tipo_usuario'].'"></topbar>'
+        ?>
     </div>
     <div id="itemsDisplay" class="container d-flex justify-content-around flex-wrap">
         <?php

@@ -14,7 +14,7 @@
 <body>
     
     <div id="topbar" class="topbar">
-        <topbar></topbar>
+        <topbar id_user="notLogged"></topbar>
     </div>
        
     <div class="container-fluid">
@@ -43,5 +43,25 @@
         All rights reserved
     </footer>
     <script src="./groov-function.js"></script>
+    <script>
+        new Vue({
+            el: '#best-selling',
+            data: {
+                hola: 'Holaa',
+                items: [
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT-KJJ86934j_xrD2TZ8NAzD4cuz7UgKwz2gg&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGtPmEY8jHc_USLiHZMOsTw9u-TpCnjEbY6Q&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBT4gf4QuqsINYa_OSdBQ1jJVMo4A0l1oOkQ&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIDc_bU6_Syrx1f2PXzTbvAxG9YFYL7Br3Tw&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQteoFsKbgX3ehNl72GW7bORndrnSPoCM1PVw&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQl2r6niWtFimVUavl7GIHT5Pg_b8zUd-BLPw&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSigTsrn9COIn7p5QnBT0IlQ1AFMFNgMvx1xw&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQxL3sbX2AvpC4w-Z5cgFxI7Nu7jbfIPiEqbw&usqp=CAU",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxdZJTNCzuAEY4YyBcGls87M27LdTrqCH_oQ&usqp=CAU",
+                ],
+                price: price
+            }
+        });
+    </script>
 </body>
 </html>

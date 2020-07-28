@@ -211,3 +211,7 @@ div.todo {
     width: 100%;
     background-color: black;
 }
+
+.opciones-user form{
+    width: 40vw;
+}

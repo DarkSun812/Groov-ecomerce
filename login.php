@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require './connection.php';
 
 $username = $_POST['username'];
@@ -10,13 +10,26 @@ $loginSQL = "SELECT * FROM usuarios WHERE username='$username' AND password='$pa
 $result = $conn->query($loginSQL);
 
 if(!$result){
-    echo 'error '.$conn->error;
+    die('error '.$conn->error);
 }
 
 if($result->num_rows > 0){
-    session_start();
-    setcookie('Usuario',$username);
-    header('Location: store.php');
+    while($row = $result->fetch_assoc()){
+        $_SESSION['activo'] = 1;
+        $_SESSION['id_user'] = $row['id_user'];
+        $_SESSION['nombre'] = $row['nombre'];
+        $_SESSION['apellido'] = $row['apellido'];
+        $_SESSION['email'] = $row['email'];
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['tipo_usuario'] = $row['tipo_usuario'];
+
+        if($_SESSION['tipo_usuario'] == 'admin'){
+            header('Location: public/menu.php');
+        }else{
+            header('Location: public/store.php');
+        }
+    }
+    
 }else{
     header('Location: login.html?err=1');
 }

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require '../connection.php';
 ?>
 <!DOCTYPE html>
@@ -16,23 +17,30 @@
 </head>
 <body>
     <div v-if="ok" id="topbar" class="topbar">
-        <topbar></topbar>
+        <?php
+            echo '<topbar id_user="'.$_SESSION['id_user'].'" username="'.$_SESSION['username'].'" tipo_usuario="'.$_SESSION['tipo_usuario'].'"></topbar>'
+        ?>
     </div>
     <div id="articulo-container" class="container d-flex justify-content-center flex-column">
         <?php
-            $galletas = $_COOKIE['articulos'];
-            $idArticulo = explode(',',$galletas);
-            foreach ($idArticulo as $ar) {
-                $sql = "SELECT * FROM items WHERE id_item='$ar'";
-                $result = $conn->query($sql);
-                if(!$result){
-                    echo 'Error '.$conn->error;
-                }else{
-                    while($row = $result->fetch_assoc()){
-                        echo '<articulo articulo_precio="'.$row['precio_unidad'].'" articulo_nombre="'.$row['nombre_producto'].'" articulo_img="'.$row['img_url'].'"></articulo>';
+            if(!isset($_COOKIE['articulos'])){
+                echo 'Sin artículos para comprar aún';
+            }else{
+                $galletas = $_COOKIE['articulos'];
+                $idArticulo = explode(',',$galletas);
+                foreach ($idArticulo as $ar) {
+                    $sql = "SELECT * FROM items WHERE id_item='$ar'";
+                    $result = $conn->query($sql);
+                    if(!$result){
+                        echo 'Error '.$conn->error;
+                    }else{
+                        while($row = $result->fetch_assoc()){
+                            echo '<articulo articulo_precio="'.$row['precio_unidad'].'" articulo_nombre="'.$row['nombre_producto'].'" articulo_img="'.$row['img_url'].'"></articulo>';
+                        }
                     }
                 }
             }
+
         ?>
     </div>
     <hr>
